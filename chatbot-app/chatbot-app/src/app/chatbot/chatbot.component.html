@@ -1,0 +1,18 @@
+<p>chatbot works!</p>
+<div class="chat-container">
+    <div class="chat-header">
+      <h3>Gen AI Chatbot</h3>
+    </div>
+  
+    <div class="chat-body" *ngIf="messages.length">
+      <div *ngFor="let message of messages" class="message" [ngClass]="{'user-message': message.type === 'user', 'ai-message': message.type === 'ai'}">
+        <p>{{ message.text }}</p>
+      </div>
+    </div>
+  
+    <div class="chat-input">
+      <input [(ngModel)]="userInput" (keydown.enter)="sendMessage()" placeholder="Ask about unit/API tests..." />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+  
