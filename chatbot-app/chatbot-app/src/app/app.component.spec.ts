@@ -34,6 +34,13 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(10);
   });
+
+  it('should correctly add zero', () => {
+    component.num1 = 0;
+    component.num2 = 0;
+    component.addNumbers();
+    expect(component.sum).toBe(0);
+  });
   
 });
 
