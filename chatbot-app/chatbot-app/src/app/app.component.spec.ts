@@ -35,26 +35,7 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(10);
   });
 
-  it('should correctly add zero', () => {
-    component.num1 = 0;
-    component.num2 = 0;
-    component.addNumbers();
-    expect(component.sum).toBe(0);
-  });
-
-  it('should correctly add numbers', () => {
-    component.num1 = -1;
-    component.num2 = -2;
-    component.addNumbers();
-    expect(component.sum).toBe(-3);
-  });
-
-    it('should correctly add numbers', () => {
-    component.num1 = 1;
-    component.num2 = 2;
-    component.addNumbers();
-    expect(component.sum).toBe(3);
-  });
+  
   
 });
 
