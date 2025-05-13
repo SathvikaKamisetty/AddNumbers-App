@@ -41,6 +41,13 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(0);
   });
+
+  it('should correctly add numbers', () => {
+    component.num1 = -1;
+    component.num2 = -7;
+    component.addNumbers();
+    expect(component.sum).toBe(-8);
+  });
   
 });
 
