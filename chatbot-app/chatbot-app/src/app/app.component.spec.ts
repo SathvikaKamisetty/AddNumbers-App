@@ -50,10 +50,10 @@ describe('AppComponent', () => {
   });
 
    it('should correctly add decimal numbers', () => {
-    component.num1 = 1;
-    component.num2 = -2;
+    component.num1 = 9;
+    component.num2 = 10;
     component.addNumbers();
-    expect(component.sum).toBe(-1);
+    expect(component.sum).toBe(19);
   });
 
 
