@@ -49,6 +49,13 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(30);
   });
 
+   it('should correctly add negative and positive numbers', () => {
+    component.num1 = -1;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(19);
+  });
+
 
 
   
