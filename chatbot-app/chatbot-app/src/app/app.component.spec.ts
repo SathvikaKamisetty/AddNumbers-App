@@ -30,10 +30,10 @@ describe('AppComponent', () => {
 
 
    it('should correctly add two negative numbers', () => {
-    component.num1 = -10;
+    component.num1 = -30;
     component.num2 = -20;
     component.addNumbers();
-    expect(component.sum).toBe(-30);
+    expect(component.sum).toBe(-50);
   });
 
  
