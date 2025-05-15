@@ -34,6 +34,13 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(70);
   });
+
+   it('should correctly add two positive numbers', () => {
+    component.num1 = 70;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(90);
+  });
   
 
 
