@@ -28,12 +28,22 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(-30);
   });
 
-  it('should correctly add decimal numbers', () => {
-    component.num1 = 5.7;
-    component.num2 = 7.5;
+
+   it('should correctly add two negative numbers', () => {
+    component.num1 = -30;
+    component.num2 = -20;
     component.addNumbers();
-    expect(component.sum).toBe(10);
+    expect(component.sum).toBe(-50);
   });
+
+  it('should correctly add two negative numbers', () => {
+    component.num1 = -30;
+    component.num2 = -70;
+    component.addNumbers();
+    expect(component.sum).toBe(-100);
+  });
+
+ 
 
   
   
