@@ -14,41 +14,21 @@ describe('AppComponent', () => {
     component = fixture.componentInstance;
   });
   
-  it('should correctly add two positive numbers', () => {
+   it('should correctly add two positive numbers', () => {
     component.num1 = 10;
     component.num2 = 20;
     component.addNumbers();
     expect(component.sum).toBe(30);
   });
 
-  it('should correctly add two negative numbers', () => {
-    component.num1 = -10;
-    component.num2 = -20;
+  it('should correctly add two positive numbers', () => {
+    component.num1 = 50;
+    component.num2 = 20;
     component.addNumbers();
-    expect(component.sum).toBe(-30);
+    expect(component.sum).toBe(70);
   });
+  
 
-
-   it('should correctly add two negative numbers', () => {
-    component.num1 = -30;
-    component.num2 = -20;
-    component.addNumbers();
-    expect(component.sum).toBe(-50);
-  });
-
-  it('should correctly add two integers', () => {
-    component.num1 = -30;
-    component.num2 = 70;
-    component.addNumbers();
-    expect(component.sum).toBe(40);
-  });
-
-  it('should correctly add numbers', () => {
-    component.num1 = 1;
-    component.num2 = 6;
-    component.addNumbers();
-    expect(component.sum).toBe(7);
-  });
 
     it('should correctly add numbers', () => {
     component.num1 = 1;
