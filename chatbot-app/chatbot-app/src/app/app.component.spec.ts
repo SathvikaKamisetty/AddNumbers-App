@@ -37,6 +37,13 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(7);
   });
 
+   it('should correctly add numbers', () => {
+    component.num1 = 1;
+    component.num2 = 6;
+    component.addNumbers();
+    expect(component.sum).toBe(7);
+  });
+
  
 
   
