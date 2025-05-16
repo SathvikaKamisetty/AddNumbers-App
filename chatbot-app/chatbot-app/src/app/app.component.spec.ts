@@ -75,7 +75,14 @@ it('should correctly add a positive and a negative number', () => {
   });
 
 
- 
+  it('should correctly add numbers', () => {
+
+    component.num1 = 68;
+    component.num2 = 6;
+    component.addNumbers();
+    expect(component.sum).toBe(74);
+  });
+
 
   
   
