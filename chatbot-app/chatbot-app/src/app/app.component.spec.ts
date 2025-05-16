@@ -49,33 +49,13 @@ it('should correctly add a positive and a negative number', () => {
   expect(component.sum).toBe(30);
 });
 
-
-  it('should correctly add a positive and a negative number', () => {
-  component.num1 = 50;
-  component.num2 = -20;
+it('should correctly add a positive and a negative number', () => {
+  component.num1 = 30;
+  component.num2 = 20;
   component.addNumbers();
-  expect(component.sum).toBe(30);
+  expect(component.sum).toBe(50);
 });
 
-    it('should correctly add numbers', () => {
-    component.num1 = 1;
-    component.num2 = 6;
-    component.addNumbers();
-    expect(component.sum).toBe(7);
-  });
-
-
-  
-    it('should correctly add numbers', () => {
-
-    component.num1 = 1;
-    component.num2 = 6;
-    component.addNumbers();
-    expect(component.sum).toBe(7);
-  });
-
-
- 
 
   
   
