@@ -86,6 +86,7 @@ describe('AppComponent', () => {
 
   });
 
+
   it('should correctly add decimal numbers', () => {
     component.num1 = 1;
     component.num2 = 1.2;
@@ -93,6 +94,8 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(2.2);
 
   });
+
+
 
   
 });
