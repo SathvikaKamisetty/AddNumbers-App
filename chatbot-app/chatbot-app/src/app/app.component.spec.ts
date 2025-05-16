@@ -56,6 +56,12 @@ it('should correctly add a positive and a negative number', () => {
   expect(component.sum).toBe(50);
 });
 
+it('should correctly add a positive and a negative number', () => {
+  component.num1 = 30;
+  component.num2 = 26;
+  component.addNumbers();
+  expect(component.sum).toBe(56);
+});
 
   
   
