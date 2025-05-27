@@ -70,6 +70,15 @@ namespace MyApp.Tests
             Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
         }
 
+         //adding api test case new
+
+        [Test]
+        public async Task Add_InvalidInput_ReturnsBadRequest()
+        {
+            var response = await _client.GetAsync("/api/add?a=abc&b=3");
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+        }
+
         
      }
 }
