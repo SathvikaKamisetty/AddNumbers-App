@@ -87,5 +87,14 @@ namespace MyApp.Tests
         }
 
         
+        
+        [Test]
+        public async Task Add_InvalidInput_ReturnsBadRequest()
+        {
+            var response = await _client.GetAsync("/api/add?a=a1&b=3");
+            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+        }
+
+        
      }
 }
