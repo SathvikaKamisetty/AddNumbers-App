@@ -70,7 +70,19 @@ it('should correctly add a positive and a negative number', () => {
   expect(component.sum).toBe(30);
 });
 
-  
+it('should correctly add a positive and a negative number', () => {
+  component.num1 = 50;
+  component.num2 = -21;
+  component.addNumbers();
+  expect(component.sum).toBe(29);
+});  
+
+  it('should correctly add a positive and a negative number', () => {
+  component.num1 = 50;
+  component.num2 = -21;
+  component.addNumbers();
+  expect(component.sum).toBe(29);
+});  
   
 });
 
