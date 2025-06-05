@@ -20,5 +20,12 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(30);
   });
+
+  it('should correctly add two positive numbers', () => {
+    component.num1 = 40;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(60);
+  });
 });
 
