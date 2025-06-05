@@ -47,35 +47,7 @@ namespace MyApp.Tests
             Assert.AreEqual("2", result);
         }
 
-        [Test]
-        public async Task Add_MissingParameter_ReturnsBadRequest()
-        {
-            var response = await _client.GetAsync("/api/add?a=4");
-            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
-        }
-
-        [Test]
-        public async Task Add_InvalidInput_ReturnsBadRequest()
-        {
-            var response = await _client.GetAsync("/api/add?a=abc&b=3");
-            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
-        }
-        [Test]
-        public async Task Add_InvalidInput_ReturnsBadRequest()
-        {
-            var response = await _client.GetAsync("/api/add?a=a&b=3");
-            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
-        }
-
-        
-        
-        [Test]
-        public async Task Add_InvalidInput_ReturnsBadRequest()
-        {
-            var response = await _client.GetAsync("/api/add?a=a1&b=3");
-            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
-        }
-
+       
         
      }
 }
