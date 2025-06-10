@@ -135,6 +135,13 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(50);
   });
 
+  it('should correctly add decimal numbers', () => {
+    component.num1 = 10;
+    component.num2 = 40;
+    component.addNumbers();
+    expect(component.sum).toBe(50);
+  });
+
 
 
   
