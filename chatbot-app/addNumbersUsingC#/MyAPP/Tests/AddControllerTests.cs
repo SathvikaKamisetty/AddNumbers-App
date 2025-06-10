@@ -47,6 +47,16 @@ namespace MyApp.Tests
             Assert.AreEqual("2", result);
         }
 
+        [Test]
+        public async Task Add_WithNegativeNumber_ReturnsCorrectSum()
+        {
+            var response = await _client.GetAsync("/api/add?a=4&b=-2");
+            response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadAsStringAsync();
+            Assert.AreEqual("2", result);
+        }
+
        
         
      }
