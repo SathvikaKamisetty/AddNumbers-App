@@ -103,8 +103,52 @@ describe('AppComponent', () => {
 
   });
 
+   it('should correctly add decimal numbers', () => {
+    component.num1 = 1;
+    component.num2 = 1.2;
+    component.addNumbers();
+    expect(component.sum).toBe(2.2);
+
+  });
+
+    it('should correctly add decimal numbers', () => {
+    component.num1 = 10;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(30);
+
+  });
+
+  it('should correctly add decimal numbers', () => {
+    component.num1 = 10;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(30);
+
+  });
 
 
+   it('should correctly add decimal numbers', () => {
+    component.num1 = 10;
+    component.num2 = 40;
+    component.addNumbers();
+    expect(component.sum).toBe(50);
+  });
+
+  it('should correctly add decimal numbers', () => {
+    component.num1 = 10;
+    component.num2 = 40;
+    component.addNumbers();
+    expect(component.sum).toBe(50);
+  });
+
+
+  it('should correctly add decimal numbers', () => {
+    component.num1 = 20;
+    component.num2 = 40;
+    component.addNumbers();
+    expect(component.sum).toBe(60);
+  });
   
 });
 
