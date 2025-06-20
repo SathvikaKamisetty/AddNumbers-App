@@ -48,19 +48,47 @@ namespace MyApp.Tests
         }
 
         [Test]
-        public async Task Add_MissingParameter_ReturnsBadRequest()
+        public async Task Add_WithNegativeNumber_ReturnsCorrectSum()
         {
-            var response = await _client.GetAsync("/api/add?a=4");
-            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+            var response = await _client.GetAsync("/api/add?a=4&b=-2");
+            response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadAsStringAsync();
+            Assert.AreEqual("2", result);
         }
 
         [Test]
-        public async Task Add_MissingParameter_ReturnsBadRequest()
+        public async Task Add_WithNegativeNumber_ReturnsCorrectSum()
         {
-            var response = await _client.GetAsync("/api/add?a=4");
-            Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+            var response = await _client.GetAsync("/api/add?a=4&b=-2");
+            response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadAsStringAsync();
+            Assert.AreEqual("2", result);
         }
 
+        [Test]
+        public async Task Add_WithNegativeNumber_ReturnsCorrectSum()
+        {
+            var response = await _client.GetAsync("/api/add?a=0&b=-2");
+            response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadAsStringAsync();
+            Assert.AreEqual("-2", result);
+        }
+
+         [Test]
+        public async Task Add_WithNegativeNumber_ReturnsCorrectSum()
+        {
+            var response = await _client.GetAsync("/api/add?a=0&b=-2");
+            response.EnsureSuccessStatusCode();
+
+            var result = await response.Content.ReadAsStringAsync();
+            Assert.AreEqual("-2", result);
+        }
+
+
+       
         
      }
 }

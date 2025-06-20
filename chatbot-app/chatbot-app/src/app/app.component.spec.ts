@@ -28,6 +28,33 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(60);
   });
 
+
+
+   it('should correctly add two positive numbers', () => {
+    component.num1 = 50;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(70);
+  });
+
+   it('should correctly add two positive numbers', () => {
+    component.num1 = 70;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(90);
+  });
+
+   it('should correctly add two positive numbers', () => {
+    component.num1 = 70;
+    component.num2 = 20;
+    component.addNumbers();
+    expect(component.sum).toBe(90);
+  });
+  
+
+
+
+
  it('should correctly add one positive and negative numbers', () => {
     component.num1 = 40;
     component.num2 = -20;
