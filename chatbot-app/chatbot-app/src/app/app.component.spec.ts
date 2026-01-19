@@ -71,6 +71,13 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(20);
   });
+
+   it('should correctly add one positive and negative numbers', () => {
+    component.num1 = 5000;
+    component.num2 = -200;
+    component.addNumbers();
+    expect(component.sum).toBe(300);
+  });
   
 });
 
