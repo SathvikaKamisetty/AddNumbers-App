@@ -78,6 +78,13 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(300);
   });
+
+  it('should correctly add 2 pos', () => {
+    component.num1 = 500;
+    component.num2 = 200;
+    component.addNumbers();
+    expect(component.sum).toBe(700);
+  });
   
 });
 
