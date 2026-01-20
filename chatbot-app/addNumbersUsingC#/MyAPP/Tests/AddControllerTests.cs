@@ -108,6 +108,27 @@ namespace MyApp.Tests
     Assert.AreEqual("90", result);
 }
 
+        //adding 2 test cases
+          [Test]
+  public async Task Add_WithNegativeAndPositive_ReturnsCorrectSum()
+{
+    var response = await _client.GetAsync("/api/add?a=5&b=5");
+    response.EnsureSuccessStatusCode();
+
+    var result = await response.Content.ReadAsStringAsync();
+    Assert.AreEqual("10", result);
+}
+
+        [Test]
+  public async Task Add_WithNegativeAndPositive_ReturnsCorrectSum()
+{
+    var response = await _client.GetAsync("/api/add?a=5&b=15");
+    response.EnsureSuccessStatusCode();
+
+    var result = await response.Content.ReadAsStringAsync();
+    Assert.AreEqual("20", result);
+}
+
         
      }
 }
