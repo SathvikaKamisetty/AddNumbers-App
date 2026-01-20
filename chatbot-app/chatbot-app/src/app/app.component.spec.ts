@@ -100,6 +100,13 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(700);
   });
+
+    it('should correctly add 2 pos', () => {
+    component.num1 = 300;
+    component.num2 = 200;
+    component.addNumbers();
+    expect(component.sum).toBe(500);
+  });
   
 });
 
