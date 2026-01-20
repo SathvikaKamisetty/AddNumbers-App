@@ -98,6 +98,16 @@ namespace MyApp.Tests
     Assert.AreEqual("2", result);
 }
 
+        [Test]
+  public async Task Add_WithNegativeAndPositive_ReturnsCorrectSum()
+{
+    var response = await _client.GetAsync("/api/add?a=30&b=60");
+    response.EnsureSuccessStatusCode();
+
+    var result = await response.Content.ReadAsStringAsync();
+    Assert.AreEqual("90", result);
+}
+
         
      }
 }
