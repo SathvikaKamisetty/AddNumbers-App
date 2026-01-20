@@ -85,6 +85,21 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(700);
   });
+
+  //adding 2 api test cases
+  it('should correctly add one positive and negative numbers', () => {
+    component.num1 = 5000;
+    component.num2 = -200;
+    component.addNumbers();
+    expect(component.sum).toBe(300);
+  });
+
+  it('should correctly add 2 pos', () => {
+    component.num1 = 500;
+    component.num2 = 200;
+    component.addNumbers();
+    expect(component.sum).toBe(700);
+  });
   
 });
 
