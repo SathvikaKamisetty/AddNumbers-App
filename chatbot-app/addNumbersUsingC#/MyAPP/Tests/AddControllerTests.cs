@@ -128,6 +128,15 @@ namespace MyApp.Tests
     var result = await response.Content.ReadAsStringAsync();
     Assert.AreEqual("20", result);
 }
+         [Test] 
+         public async Task Add_WithNegativeAndPositive_ReturnsCorrectSum()
+{
+    var response = await _client.GetAsync("/api/add?a=10&b=15");
+    response.EnsureSuccessStatusCode();
+
+    var result = await response.Content.ReadAsStringAsync();
+    Assert.AreEqual("25", result);
+}
 
         
      }

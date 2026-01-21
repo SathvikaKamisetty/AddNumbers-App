@@ -107,6 +107,20 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(500);
   });
+
+  it('should correctly add 2 pos', () => {
+    component.num1 = 2;
+    component.num2 = 1;
+    component.addNumbers();
+    expect(component.sum).toBe(3);
+  });
+
+  it('should correctly add 2 pos', () => {
+    component.num1 = 20;
+    component.num2 = 10;
+    component.addNumbers();
+    expect(component.sum).toBe(30);
+  });
   
 });
 
