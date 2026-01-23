@@ -86,7 +86,7 @@ describe('AppComponent', () => {
     expect(component.sum).toBe(700);
   });
 
-  //adding 2 api test cases
+  //adding 2 unit test cases
   it('should correctly add one positive and negative numbers', () => {
     component.num1 = 5000;
     component.num2 = -200;
@@ -120,6 +120,13 @@ describe('AppComponent', () => {
     component.num2 = 10;
     component.addNumbers();
     expect(component.sum).toBe(30);
+  });
+
+   it('should correctly add one positive and negative numbers', () => {
+    component.num1 = 40;
+    component.num2 = -20;
+    component.addNumbers();
+    expect(component.sum).toBe(20);
   });
   
 });
