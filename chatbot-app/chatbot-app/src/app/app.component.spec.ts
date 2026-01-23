@@ -136,6 +136,14 @@ describe('AppComponent', () => {
     component.addNumbers();
     expect(component.sum).toBe(20);
   });
+
+
+  it('should correctly add one positive and negative numbers', () => {
+    component.num1 = 40;
+    component.num2 = -20;
+    component.addNumbers();
+    expect(component.sum).toBe(20);
+  });
   
 });
 
